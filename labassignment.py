@@ -19,33 +19,35 @@ def img2text(url):
 
 # text2story
 def text2story(text):
+    start = f"In this picture, we can see {text}."
     prompt = (
         f"Look at the scenario: {text} "
         f"Write a complete, happy, and simple children's story (50 to 100 words) for a kid aged 3-10 based only on the scenario. "
         f"The story must match the scenario exactly. "
         f"Make the story fun, easy to understand, and end nicely. "
         f"Do not add new characters or events not mentioned in the scenario. "
-        f"Story: "
+        f"Story: {start}"
         )
     
     story_pipe = pipeline("text-generation", 
                           model="pranavpsv/genre-story-generator-v2")
     story_results = story_pipe(
         prompt, 
-        max_new_tokens = 150,
+        max_new_tokens = 100,
         do_sample = True,
-        temperature = 0.2,
-        top_p = 0.8,
-        repetition_penalty = 1.2,
+        temperature = 0.4,
+        top_k = 40,
+        repetition_penalty = 1.4,
         return_full_text = False
     )
     
     story = story_results[0]['generated_text']
+    fstory = start + " " + story
 
-    if "." in story:
-        story = story[:story.rfind(".") + 1]
+    if "." in fstory:
+        fstory = fstory[:fstory.rfind(".") + 1]
         
-    return story.strip()
+    return fstory.strip()
     
 # text2audio
 def text2audio(story_text):
