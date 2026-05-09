@@ -20,11 +20,11 @@ def img2text(url):
 # text2story
 def text2story(text):
     prompt = (
-        f"Look at the image uploaded by the user: {text} "
+        f"Look at the scenario: {text} "
         f"Write a complete, happy, and simple children's story (50 to 100 words) for a kid aged 3-10 based only on the image. "
-        f"The story must match the image exactly. "
+        f"The story must match the scenario exactly. "
         f"Make the story fun, easy to understand, and end nicely. "
-        f"Do not add new characters or events not mentioned in the image. "
+        f"Do not add new characters or events not mentioned in the scenario. "
         f"Story: "
         )
     
