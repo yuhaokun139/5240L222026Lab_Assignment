@@ -37,6 +37,7 @@ def text2story(text):
         temperature = 0.4,
         top_k = 40,
         repetition_penalty = 1.4,
+        no_repeat_ngram_size = 2,
         return_full_text = False
     )
     
