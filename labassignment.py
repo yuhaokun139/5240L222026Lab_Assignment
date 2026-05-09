@@ -35,7 +35,7 @@ def text2story(text):
         max_new_tokens = 150,
         min_new_tokens = 80,
         do_sample = True,
-        temperature = 0.4,
+        temperature = 0.6,
         repetition_penalty = 1.2,
         return_full_text = False
     )
