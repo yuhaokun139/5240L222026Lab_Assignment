@@ -41,7 +41,11 @@ def text2story(text):
     )
     
     story = story_results[0]['generated_text']
-    return story
+
+    if "." in story:
+        story = story[:story.rfind(".") + 1]
+        
+    return story.strip()
     
 # text2audio
 def text2audio(story_text):
