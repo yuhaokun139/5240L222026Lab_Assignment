@@ -20,9 +20,9 @@ def img2text(url):
 # text2story
 def text2story(text):
     prompt = (
-        f"Based on the details extracted from the uploaded image, write a short, fun, and safe children's story"
+        f"Based on the details extracted from the uploaded image, write a short, fun, safe, and complete children's story"
         f"The story is between 50 and 100 words and suitable for kids aged 3-10"
-        f"Scene:{text}"
+        f"Scene:{text}\n"
         f"Story (50-100 words):"
         )
     
@@ -33,7 +33,8 @@ def text2story(text):
         max_new_tokens = 150, 
         do_sample = True, 
         temperature = 0.7, 
-        top_p = 0.9
+        top_p = 0.9,
+        return_full_text = False
     )
     
     story = story_results[0]['generated_text']
