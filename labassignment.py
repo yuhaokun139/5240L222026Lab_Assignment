@@ -78,10 +78,9 @@ def main():
             st.write(f"**Story:** {story}")
 
         if st.button("Play Audio"):
-            with st.spinner("Generating audio data..."):
-                audio_data = text2audio(story)
-                audio_array = audio_data["audio"]
-                sample_rate = audio_data["sampling_rate"]
-                st.audio(audio_array, sample_rate=sample_rate)
+            audio_data = text2audio(story)
+            audio_array = audio_data["audio"]
+            sample_rate = audio_data["sampling_rate"]
+            st.audio(audio_array, sample_rate=sample_rate)
 
 main()
