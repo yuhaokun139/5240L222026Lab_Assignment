@@ -29,6 +29,7 @@ def text2story(text):
     
     story_pipe = pipeline("text-generation", 
                           model="pranavpsv/genre-story-generator-v2")
+    
     story_results = story_pipe(
         prompt, 
         max_new_tokens = 120,
@@ -36,7 +37,6 @@ def text2story(text):
         temperature = 0.3,
         top_k = 40,
         repetition_penalty = 1.5,
-        no_repeat_ngram_size = 2,
         return_full_text = False
     )
     
