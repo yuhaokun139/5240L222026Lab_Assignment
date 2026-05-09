@@ -35,6 +35,7 @@ def text2story(text):
         do_sample = True, 
         temperature = 0.7, 
         top_p = 0.9,
+        repetition_penalty = 1.2,
         return_full_text = False
     )
     
