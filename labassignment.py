@@ -72,7 +72,7 @@ def main():
         if st.button("Generate the Magic Story"):
             with st.spinner("Loading image..."):
                 scenario = img2text(uploaded_file.name)
-                st.write(f"**Scenario:** {scenario}")
+                st.write(f"**Scenario:** {scenario.title()}")
                 
             with st.spinner("Generating a story..."):
                 story = text2story(scenario)
