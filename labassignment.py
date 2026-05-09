@@ -57,7 +57,7 @@ def text2audio(story_text):
 # main part
 def main():
     st.set_page_config(page_title="Welcome", page_icon="🦄️")
-    st.header("Turning IMAGE into STORY")
+    st.header("Turning IMAGE into STORY😊")
     
     uploaded_file = st.file_uploader("Select an Image...")
     
