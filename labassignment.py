@@ -60,7 +60,7 @@ def main():
     st.set_page_config(page_title="Welcome", page_icon="🦄️")
     st.header("Turning IMAGE Into STORY😊")
     
-    uploaded_file = st.file_uploader("Select An Image...")
+    uploaded_file = st.file_uploader("Select an Image...")
     
     if uploaded_file is not None:
 # Save file locally
