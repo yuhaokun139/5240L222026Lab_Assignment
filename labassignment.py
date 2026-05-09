@@ -66,12 +66,12 @@ def main():
         st.image(uploaded_file, caption="Uploaded Image", use_column_width=True)
 
         with st.spinner("Loading image..."):
-        scenario = img2text(uploaded_file.name)
-        st.write(f"**Scenario:** {scenario}")
+            scenario = img2text(uploaded_file.name)
+            st.write(f"**Scenario:** {scenario}")
 
         with st.spinner("Generating a story..."):
-        story = text2story(scenario)
-        st.write(f"**Story:** {story}")
+            story = text2story(scenario)
+            st.write(f"**Story:** {story}")
 
         if st.button("Play Audio"):
             with st.spinner("Generating audio data..."):
