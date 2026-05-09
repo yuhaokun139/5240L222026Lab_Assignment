@@ -20,11 +20,11 @@ def img2text(url):
 # text2story
 def text2story(text):
     prompt = (
+        f"Based on this scene: {text}. "
         f"Based on the details extracted from the uploaded image, write a short, fun, safe, and complete children's story. "
-        f"The story is between 50 and 100 words and suitable for kids aged 3-10. "
-        f"Scene:{text}\n"
-        f"Story (50-100 words): "
+        f"The story is between 50 and 100 words, and it is suitable for kids aged 3-10. "
         f"The story must have a clear ending. "
+        f"Story: "
         )
     
     story_pipe = pipeline("text-generation", 
