@@ -22,8 +22,8 @@ def text2story(text):
     start = f"In this picture, we can see {text}."
     
     prompt = (
-        f"Continue the story based on the picture: {text} "
         f"Write a complete, happy, and simple children's story (50 to 100 words) for a kid aged 3-10.\n"
+        f"The story based on the picture: {text} "
         f"Story: {start}"
         )
     
