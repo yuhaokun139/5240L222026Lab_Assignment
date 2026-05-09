@@ -31,9 +31,10 @@ def text2story(text):
                           model="pranavpsv/genre-story-generator-v2")
     story_results = story_pipe(
         prompt, 
-        max_new_tokens = 150, 
-        do_sample = True, 
-        top_p = 0.9,
+        max_new_tokens = 150,
+        min_nex_tokens = 80,
+        do_sample = True,
+        temperature = 0.4
         repetition_penalty = 1.2,
         return_full_text = False
     )
