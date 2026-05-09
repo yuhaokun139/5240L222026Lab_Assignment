@@ -22,7 +22,7 @@ def text2story(text):
     prompt = (
         f"Based on the details extracted from the uploaded image, write a short, fun, and safe children's story"
         f"The story is between 50 and 100 words and suitable for kids aged 3-10"
-        f"Scene:{prompt_text}"
+        f"Scene:{text}"
         f"Story (50-100 words):"
         )
     
