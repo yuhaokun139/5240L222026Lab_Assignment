@@ -56,8 +56,8 @@ def text2audio(story_text):
 
 # main part
 def main():
-    st.set_page_config(page_title="Your Image to Audio Story", page_icon="🦜")
-    st.header("ISOM5240: Turn Your Image to Audio Story")
+    st.set_page_config(page_title="Welcome", page_icon="🦄️")
+    st.header("Turning your story into story")
     
     uploaded_file = st.file_uploader("Select an Image...")
     
@@ -77,10 +77,11 @@ def main():
             with st.spinner("Generating a story..."):
                 story = text2story(scenario)
                 st.write(f"**Story:** {story}")
-                
-            audio_data = text2audio(story)
-            audio_array = audio_data["audio"]
-            sample_rate = audio_data["sampling_rate"]
-            st.audio(audio_array, sample_rate=sample_rate)
+
+            with st.spinner("Generating audio data..."):
+                audio_data = text2audio(story)
+                audio_array = audio_data["audio"]
+                sample_rate = audio_data["sampling_rate"]
+                st.audio(audio_array, sample_rate=sample_rate)
 
 main()
