@@ -33,7 +33,6 @@ def text2story(text):
     story_results = story_pipe(
         prompt, 
         max_new_tokens = 150,
-        min_new_tokens = 80,
         do_sample = True,
         temperature = 0.6,
         repetition_penalty = 1.2,
