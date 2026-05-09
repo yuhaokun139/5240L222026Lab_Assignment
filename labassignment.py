@@ -58,9 +58,9 @@ def text2audio(story_text):
 # main part
 def main():
     st.set_page_config(page_title="Welcome", page_icon="🦄️")
-    st.header("Turning IMAGE into STORY😊")
+    st.header("Turning IMAGE Into STORY😊")
     
-    uploaded_file = st.file_uploader("Select an Image...")
+    uploaded_file = st.file_uploader("Select An Image...")
     
     if uploaded_file is not None:
 # Save file locally
@@ -70,7 +70,7 @@ def main():
 
         st.image(uploaded_file, caption="Uploaded Image", use_column_width=True)
 
-        if st.button("Generate the Magic Story"):
+        if st.button("Generate The Magic Story"):
             with st.spinner("Loading image..."):
                 scenario = img2text(uploaded_file.name)
                 st.write(f"**Scenario:** {scenario.title()}")
