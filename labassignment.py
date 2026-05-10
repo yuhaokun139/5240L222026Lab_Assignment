@@ -2,11 +2,6 @@
 
 # Import part
 import streamlit as st
-
-# Program title: Storytelling App
-
-# Import part
-import streamlit as st
 from transformers import pipeline
 
 # function part
